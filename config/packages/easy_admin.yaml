@@ -1,0 +1,321 @@
+easy_admin:
+    design:
+           menu:
+               - { label: 'public.homepage', route: 'login' }
+               - Voucher
+               - User
+               - XmlFile
+               - Country
+               - Region
+               - City
+               - Rating
+               - Hotel
+               - Flight
+               - Airport
+               - RoomType
+               - RoomCategory
+               - Accommodation
+               - Pansion
+               - RoomDescription
+               - LogData
+               - InterlookWebUser
+               - InterlookWebSearchParners
+    entities:
+#        # List the entity class name you want to manage
+       Voucher:
+           class: App\Entity\Voucher
+           label: Reservations
+           list:
+              actions: ['show','importToInterlook']
+              fields:
+                 - { property: 'id' , label: 'ID'}
+                 - { property: 'voucher_no' , label: 'Voucher Num'}
+
+           form:
+              fields:
+                - {type: 'group', css_class: 'col-sm-10', label: 'Voucher' }
+                - { property: 'id' , label: 'ID'}
+                - { property: 'record_type' , label: 'Record Type' , type: 'text'}
+                - { property: 'partner' , label: 'Partner' , type: 'text'}
+                - { property: 'comment_booking',label: 'Comments', type: 'text' }
+                - { type: 'group', css_class: 'new-row' }
+#                - { type: 'group', css_class: 'col-sm-10', label: 'Voucher Services' }
+                - { property: 'voucher_services',label: 'voucherServices', type: "collection" ,type_options:{entry_type: 'App\Form\VoucherServicesType', by_reference: true } }
+#                - { property: 'xmlfile', label: 'File' , type: "collection" , type_options:{ entry_type: 'App\Form\XmlFileType'} }
+       User:
+           class: App\Entity\User
+           label: 'Users'
+           list:
+             fields:
+                  - { property: 'id' , label: 'ID'}
+                  - { property: 'email' , label: 'Email'}
+                  - { property: 'is_active' , label: 'Is Active ' , type: 'boolean',  sortable: true }
+                  - { property: 'form_roles',label: 'Roles'}
+
+
+           form:
+               fields:
+#                  - { property: 'id' , label: 'ID'}
+                    - { property: 'email' , label: 'Email'}
+                    - { property: 'is_active' , label: 'Is Active ', type: 'checkbox'}
+#                    - { property: 'form_roles',label: 'text' }
+
+       XmlFile:
+            class: App\Entity\XmlFile
+            disabled_actions: [ 'delete' , 'edit' ]
+
+            list:
+
+               actions: ['show','import']
+               fields:
+                - { property: 'id' , label: 'ID'}
+                - { property: 'XmlFile' , label: 'Name' , type: 'text'}
+                - { property: 'location' , label: 'Location' , type: 'text'}
+                - { property: 'is_imprted' , label: 'Is Imported' , type: 'boolean',  sortable: true }
+
+   #            - { property: 'FormFile', label: 'File' , type: "collection" , type_options:{ entry_type: 'App\Form\XmlFileType'} }
+            form:
+               form_options: { validation_groups: false }
+               fields:
+          #         - { property: 'id' , label: 'ID'}
+#                   - { property: 'XmlFile' , label: 'Name' , type: 'text'}
+                   - { property: 'FormFile', label: 'File' , type: "collection" , type_options:{ entry_type: 'App\Form\XmlFileType'} }
+
+       Country:
+            class: App\Entity\Country
+
+
+            list:
+               actions:
+                       - { name: 'sync',label: 'Sync Countries', css_class: 'btn btn-primary'}
+                       - { name: 'new' }
+
+               fields:
+                        - {property: 'id'}
+                        - {property: 'name',type: 'text'}
+#                        - {property: 'name_lat',type: 'text'}
+#                        - {property: 'description',type: 'text'}
+#                        - {property: 'code'}
+#                        - {property: 'code_lat'}
+#                        - {property: 'unicode'}
+
+            form:
+               fields:
+                   - {property: 'name',type: 'text'}
+                   - {property: 'name_lat',type: 'text'}
+                   - {property: 'description',type: 'text'}
+                   - {property: 'code',type: 'text'}
+                   - {property: 'code_lat',type: 'text'}
+                   - {property: 'unicode',type: 'text'}
+       Region:
+            class: App\Entity\Region
+            list:
+                actions:
+                      - { name: 'sync', label: 'Sync Region',css_class: 'btn btn-primary'}
+                      - { name: 'new' }
+
+                fields:
+                     - {property: 'id' ,type: 'text'}
+                     - {property: 'description',type: 'text'}
+                     - {property: 'name',type: 'text'}
+                     - { property: 'country' }
+#                     - {property: 'name_lat',type: 'text'}
+#                     - {property: 'interlook_id',type: 'text'}
+                     - {property: 'code',type: 'text'}
+#                     - {property: 'code_lat',type: 'text'}
+#                     - {property: 'unicode',type: 'text'}
+            form:
+                           fields:
+                               - {property: 'id'}
+                               - {property: 'name',type: 'text'}
+                               - {property: 'name_lat',type: 'text'}
+                               - {property: 'description',type: 'text'}
+                               - {property: 'code',type: 'text'}
+                               - {property: 'code_lat',type: 'text'}
+                               - {property: 'unicode',type: 'text'}
+                               - { property: 'country' }
+       City:
+            class: App\Entity\City
+            list:
+                           actions:
+                                   - { name: 'sync', label: 'Sync Cities',css_class: 'btn btn-primary'}
+                                   - { name: 'new' }
+                           fields:
+                                 - {property: 'id'}
+                                 - {property: 'name',type: 'text'}
+#                                 - {property: 'name_lat',type: 'text'}
+#                                 - {property: 'description',type: 'text'}
+                                 - {property: 'code',type: 'text'}
+                                 - { property: 'region' }
+                                 - { property: 'country' }
+#                                 - {property: 'code_lat',type: 'text'}
+#                                 - {property: 'unicode',type: 'text'}
+            form:
+                           fields:
+                               - {property: 'name',type: 'text'}
+                               - {property: 'name_lat',type: 'text'}
+                               - {property: 'description',type: 'text'}
+                               - {property: 'code',type: 'text'}
+                               - {property: 'code_lat',type: 'text'}
+                               - {property: 'unicode',type: 'text'}
+
+       Rating:
+            class: App\Entity\Rating
+            list:
+                  actions:
+                       - { name: 'sync', label: 'Sync Rating',css_class: 'btn btn-primary'}
+                       - { name: 'new' }
+                  fields:
+                        - { property: 'id' }
+                        - { property: 'name' }
+                        - { property: 'interlook_id' }
+
+       Hotel:
+            class: App\Entity\Hotel
+            list:
+                  actions:
+                      - { name: 'sync', label: 'Sync Hotel',css_class: 'btn btn-primary'}
+                      - { name: 'new' }
+
+                  fields:
+                        - { property: 'id' }
+                        - { property: 'name' }
+                        - { property: 'interlook_id' }
+                        - { property: 'city'}
+
+       Flight:
+            class: App\Entity\Flight
+            list:
+                  actions:
+                    - { name: 'sync', label: 'Sync Flight',css_class: 'btn btn-primary'}
+                    - { name: 'new' }
+                  fields:
+                        - { property: 'id' }
+                        - { property: 'number' }
+#                        - { property: 'city_from' }
+                        - { property: 'airport_from' }
+#                        - { property: 'city_to' }
+#                        - { property: 'airport_to' }
+#                        - { property: 'is_arrival'}
+
+       Airport:
+                   class: App\Entity\Airport
+                   list:
+                         actions:
+                           - { name: 'sync', label: 'Sync Airport',css_class: 'btn btn-primary'}
+                           - { name: 'new' }
+                         fields:
+                               - { property: 'id' }
+                               - { property: 'name' }
+                               - { property: 'description' }
+                               - { property: 'city' }
+                               - { property: 'region' }
+
+       RoomType:
+             class: App\Entity\RoomType
+             list:
+                   actions:
+                          - { name: 'sync', label: 'Sync RoomType',css_class: 'btn btn-primary'}
+                          - { name: 'new' }
+
+                   fields:
+                          - { property: 'id' }
+
+                          - { property: 'name' }
+                          - { property: 'places' }
+                          - { property: 'ext_places' }
+                          - { property: 'interlook_id' }
+
+       RoomCategory:
+             class: App\Entity\RoomCategory
+             list:
+                   actions:
+                         - { name: 'sync', label: 'Sync RoomCategory',css_class: 'btn btn-primary'}
+                         - { name: 'new' }
+                   fields:
+                        - { property: 'id' }
+
+                        - { property: 'name' }
+                        - { property: 'code' }
+                        - { property: 'interlook_id' }
+                        - { property: 'is_main', type: 'boolean' }
+       Accommodation:
+             class: App\Entity\Accommodation
+             list:
+                   actions:
+                        - { name: 'sync', label: 'Sync Accommodation',css_class: 'btn btn-primary'}
+                        - { name: 'new' }
+                        - { name: 'show'}
+                   fields:
+                        - { property: 'id' }
+                        - { property: 'is_per_room' , type: 'boolean' }
+                        - { property: 'name' }
+                        - { property: 'interlook_id' }
+#                        - { property: 'count_adult_main' }
+#                        - { property: 'count_child_main' }
+#                        - { property: 'count_adult_extra' }
+#                        - { property: 'count_child_extra' }
+                        - { property: 'accommodation_ages' }
+
+
+       Pansion:
+            class: App\Entity\Pansion
+            list:
+                 actions:
+                        - { name: 'sync', label: 'Sync Pansion',css_class: 'btn btn-primary'}
+                        - { name: 'new' }
+
+                 fields:
+                        - { property: 'id' }
+                        - { property: 'name' }
+
+       RoomDescription:
+           class: App\Entity\RoomDescription
+           list:
+                 actions:
+                        - { name: 'sync', label: 'Sync RoomDescription',css_class: 'btn btn-primary'}
+                        - { name: 'new' }
+                 fields:
+                        - { property: 'id' }
+                        - { property: 'name' }
+
+       LogData:
+          class: App\Entity\LogData
+          list:
+                actions:
+                         - { name: 'sync', label: 'Sync Log Data',css_class: 'btn btn-primary'}
+                         - { name: 'new' }
+                         - { name: 'show'}
+                fields:
+                         - { property: 'id' }
+                         - { property: 'date' }
+                         - { property: 'hotel_count' }
+                         - { property: 'execute_time' }
+                         - { property: 'computer' }
+
+       InterlookWebUser:
+          class: App\Entity\InterlookWebUser
+          list:
+              actions:
+                      - { name: 'sync', label: 'Sync web users',css_class: 'btn btn-primary'}
+
+                      - { name: 'new' }
+                      - { name: 'show'}
+              fields:
+                     - { property: 'id' }
+                     - { property: 'name' }
+                     - { property: 'login' }
+                     - { property: 'type' }
+
+
+       InterlookWebSearchParners:
+          class: App\Entity\InterlookWebSearchParners
+          list:
+             actions:
+                   - { name: 'sync', label: 'Sync Searches',css_class: 'btn btn-primary'}
+                   - { name: 'new' }
+                   - { name: 'show'}
+             fields:
+                    - { property: 'id' }
+                    - { property: 'interlook_user' }
+                    - { property: 'date' }

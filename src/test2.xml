@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:ns1="http://www.megatec.ru/"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <env:Body>
+        <ns1:CreateReservation>
+            <ns1:guid>d47bd531-c17b-4cd8-a209-7a896f338929</ns1:guid>
+            <ns1:reserv HasInvoices="false">
+                <ns1:agentDiscount>0</ns1:agentDiscount>
+                <ns1:Rate>
+                    <ns1:ID>1</ns1:ID>
+                    <ns1:Code>EU</ns1:Code>
+                    <ns1:CodeLat>EU</ns1:CodeLat>
+                    <ns1:IsMain>false</ns1:IsMain>
+                    <ns1:IsNational>false</ns1:IsNational>
+                </ns1:Rate>
+                <ns1:TouristServices>
+                    <ns1:TouristService>
+                        <ns1:ID>0</ns1:ID>
+                        <ns1:TouristID>-1</ns1:TouristID>
+                        <ns1:ServiceID>1</ns1:ServiceID>
+                    </ns1:TouristService>
+                    <ns1:TouristService>
+                        <ns1:ID>0</ns1:ID>
+                        <ns1:TouristID>-2</ns1:TouristID>
+                        <ns1:ServiceID>1</ns1:ServiceID>
+                    </ns1:TouristService>
+                    <ns1:TouristService>
+                        <ns1:ID>0</ns1:ID>
+                        <ns1:TouristID>-3</ns1:TouristID>
+                        <ns1:ServiceID>1</ns1:ServiceID>
+                    </ns1:TouristService>
+                </ns1:TouristServices>
+                <ns1:Services>
+                    <ns1:Service xsi:type="ns1:HotelService">
+                        <ns1:ExternalID>0</ns1:ExternalID>
+                        <ns1:Price>0</ns1:Price>
+                        <ns1:NMen>3</ns1:NMen>
+                        <ns1:PartnerID>0</ns1:PartnerID>
+                        <ns1:Quota>Request</ns1:Quota>
+                        <ns1:PacketKey>0</ns1:PacketKey>
+                        <ns1:Tourists>
+                            <ns1:Tourist Name="Dostalova" Sex="Female" FirstName="Dostalova" LastName="Bretislava"
+                                         SurName="sn" BirthDate="1949-09-20T00:00:00+02:00" FirstNameLat="Dostalova"
+                                         LastNameLat="Bretislava" SurNameLat="snl" AgeType="Adult" Citizen=""
+                                         IsMain="false" ExternalID="0" ID="-1">
+                                <ns1:LocalPassport/>
+                                <ns1:ForeignPassport/>
+                            </ns1:Tourist>
+                            <ns1:Tourist Name="Dostalova" Sex="Child" FirstName="Dostalova" LastName="Veronika"
+                                         SurName="sn" BirthDate="2007-11-04T00:00:00+02:00" FirstNameLat="Dostalova"
+                                         LastNameLat="Veronika" SurNameLat="snl" AgeType="Child" Citizen=""
+                                         IsMain="false" ExternalID="0" ID="-2">
+                                <ns1:LocalPassport/>
+                                <ns1:ForeignPassport/>
+                            </ns1:Tourist>
+                            <ns1:Tourist Name="Dostal" Sex="Male" FirstName="Dostal" LastName="Jaroslav" SurName="sn"
+                                         BirthDate="1944-07-22T00:00:00+02:00" FirstNameLat="Dostal"
+                                         LastNameLat="Jaroslav" SurNameLat="snl" AgeType="Adult" Citizen=""
+                                         IsMain="false" ExternalID="0" ID="-3">
+                                <ns1:LocalPassport/>
+                                <ns1:ForeignPassport/>
+                            </ns1:Tourist>
+                        </ns1:Tourists>
+                        <ns1:Name>Arena Mar 4* (Golden Sands)</ns1:Name>
+                        <ns1:StartDate>2018-06-01T00:00:00+03:00</ns1:StartDate>
+                        <ns1:StartDay>0</ns1:StartDay>
+                        <ns1:Duration>5</ns1:Duration>
+                        <ns1:Brutto>0</ns1:Brutto>
+                        <ns1:Netto>0</ns1:Netto>
+                        <ns1:ServiceClassID>1</ns1:ServiceClassID>
+                        <ns1:TouristCount>3</ns1:TouristCount>
+                        <ns1:ID>1</ns1:ID>
+                        <ns1:Hotel>
+                            <ns1:ID>5353</ns1:ID>
+                            <ns1:City>
+                                <ns1:ID>33</ns1:ID>
+                                <ns1:CountryID>4</ns1:CountryID>
+                                <ns1:RegionID>0</ns1:RegionID>
+                            </ns1:City>
+                            <ns1:RegionID>0</ns1:RegionID>
+                            <ns1:PriceType>None</ns1:PriceType>
+                            <ns1:CountCosts>0</ns1:CountCosts>
+                            <ns1:CityID>33</ns1:CityID>
+                            <ns1:HotelCategoryID>0</ns1:HotelCategoryID>
+                        </ns1:Hotel>
+                        <ns1:Room>
+                            <ns1:RoomTypeID>56</ns1:RoomTypeID>
+                            <ns1:RoomCategoryID>44</ns1:RoomCategoryID>
+                            <ns1:RoomAccomodationID>2315</ns1:RoomAccomodationID>
+                            <ns1:ID>0</ns1:ID>
+                        </ns1:Room>
+                        <ns1:RoomID>0</ns1:RoomID>
+                        <ns1:PansionID>26</ns1:PansionID>
+                    </ns1:Service>
+                </ns1:Services>
+                <ns1:ID>-1</ns1:ID>
+                <ns1:Netto>0</ns1:Netto>
+                <ns1:Brutto>0</ns1:Brutto>
+                <ns1:CountryID>4</ns1:CountryID>
+                <ns1:CityID>33</ns1:CityID>
+                <ns1:PartnerID>0</ns1:PartnerID>
+                <ns1:AgentDiscount>0</ns1:AgentDiscount>
+                <ns1:Status>WaitingConfirmation</ns1:Status>
+                <ns1:StartDate>2018-06-01T00:00:00+03:00</ns1:StartDate>
+                <ns1:EndDate>2018-06-06T00:00:00+03:00</ns1:EndDate>
+                <ns1:Duration>5</ns1:Duration>
+                <ns1:CreationDate>2018-02-15T14:21:09+02:00</ns1:CreationDate>
+                <ns1:CreatorID>0</ns1:CreatorID>
+                <ns1:Tourists>
+                    <ns1:Tourist Name="Dostalova" Sex="Female" FirstName="Dostalova" LastName="Bretislava" SurName="sn"
+                                 BirthDate="1949-09-20T00:00:00+02:00" FirstNameLat="Dostalova" LastNameLat="Bretislava"
+                                 SurNameLat="snl" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0" ID="-1">
+                        <ns1:LocalPassport/>
+                        <ns1:ForeignPassport/>
+                    </ns1:Tourist>
+                    <ns1:Tourist Name="Dostalova" Sex="Child" FirstName="Dostalova" LastName="Veronika" SurName="sn"
+                                 BirthDate="2007-11-04T00:00:00+02:00" FirstNameLat="Dostalova" LastNameLat="Veronika"
+                                 SurNameLat="snl" AgeType="Child" Citizen="" IsMain="false" ExternalID="0" ID="-2">
+                        <ns1:LocalPassport/>
+                        <ns1:ForeignPassport/>
+                    </ns1:Tourist>
+                    <ns1:Tourist Name="Dostal" Sex="Male" FirstName="Dostal" LastName="Jaroslav" SurName="sn"
+                                 BirthDate="1944-07-22T00:00:00+02:00" FirstNameLat="Dostal" LastNameLat="Jaroslav"
+                                 SurNameLat="snl" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0" ID="-3">
+                        <ns1:LocalPassport/>
+                        <ns1:ForeignPassport/>
+                    </ns1:Tourist>
+                </ns1:Tourists>
+                <ns1:OwnerID>0</ns1:OwnerID>
+                <ns1:ExternalID>0</ns1:ExternalID>
+                <ns1:AdditionalParams>
+                    <ns1:ParameterPair Key="PCNId">
+                        <ns1:Value xsi:type="xsd:int">0</ns1:Value>
+                    </ns1:ParameterPair>
+                </ns1:AdditionalParams>
+            </ns1:reserv>
+        </ns1:CreateReservation>
+    </env:Body>
+</env:Envelope>

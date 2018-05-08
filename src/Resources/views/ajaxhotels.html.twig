@@ -1,0 +1,156 @@
+{% extends  'base.html.twig' %}
+
+{% block title %}Welcome!{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    <h3>StreamedResponse!</h3>
+    <hr/>
+    <button id="test">Start streaming</button>
+    <p id="stream-started" style="display: none;">Here comes the stream ...</p>
+    {#<code id="stream-output" style="display: none;"></code>#}
+    <hr/>
+    <div class="pagination-container max-width ">
+        <div class="container">
+
+            <div class="table  ">
+                <tbody>
+                <div id="stream-output">
+
+                </div>
+
+                </tbody>
+            </div>
+
+        </div>
+        <div class="text-center">
+            <div class="pagination pagination-centered">
+
+                <ul class="pagination " id="stream-output-pages">
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {#<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#}
+
+    <script>
+        $(document).ready(function () {
+                $('button').click(function () {
+                    var lastResponseLength = false;
+                    $('#stream-output-pages').empty();
+                    // $('#stream-output-pages').hide();
+                    // $('#stream-started').show();
+                    $('#stream-output').empty();
+                    $('#stream-output').show();
+
+                    setTimeout(startStreaming(lastResponseLength), 1500);
+                    // $( document ).ajaxStart(function() {
+                    //     $( "#stream-started" ).show();
+                    // });
+                });
+
+                function startStreaming(lastResponseLength) {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('GET', '{{ (path('request_ajax')) }}', true);
+                    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+                    xhr.onprogress = function (e) {
+                        var response = e.currentTarget.response;
+                        var output = lastResponseLength === false
+                            ? response
+                            : response.substring(lastResponseLength);
+
+                        lastResponseLength = response.length;
+                        console.log(xhr.readyState);
+                        console.log(output);
+                        var obj = $.parseJSON(output);
+
+                        var display = '';
+                        if (obj.page > 1) {
+                            display = 'style="display: none;"'
+                        }
+                        ;
+                        var sum = function (a, b) {
+                            return (Number(a) + Number(b)).toFixed(2)
+                        };
+                        $.each(obj.HotelServices, function (k, v) {
+
+
+                            $('#stream-output').append('<tr data-page="' + obj.page + '"' + ' ' + display + '><td>' + v.HotelName + '</td><td> ' + v.RdName + ' </td><td> ' + v.AcName + '</td><td>  ' + v.PnCode + ' </td><td> ' + sum(v.Cost, v.AddHotsCost) + '</td><td>  ' + v.Rate + ' ' + '</td>' + '</tr> </div> ');
+
+                        })
+                        $('#stream-output-pages').append('<li data-page="' + obj.page + '"' + 'data-page-class="page-item"><a class="page-link" href="#">' + obj.page + '</a></li>');
+
+                    };
+                    var paginationScrools = function () {
+                        $('#stream-output-pages').prepend('<li data-page="Previous"class="page-item"><a class="page-link" href="#">Previous</a></li>');
+                        $('#stream-output-pages').append(' <li data-page="Next" class="page-item"><a class="page-link" href="#">Next</a></li>');
+                    };
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4) {
+                            console.log(xhr.status);
+                            // $('#stream-output-pages').show();
+                            $('#stream-output').promise().done(paginationScrools);
+                            $('#stream-output').promise().done(paginationHandler);
+                            // $('#stream-output').append('<p>Completed!</p>');
+                        }
+                    };
+
+                    xhr.send('hotel');
+
+                }
+            }
+        );
+    </script>
+    <script>
+
+        var paginationHandler = function () {
+            // store pagination container so we only select it once
+            var $paginationContainer = $(".pagination-container"),
+                $pagination = $paginationContainer.find('.pagination ul');
+
+
+            // click event
+            $pagination.find("li a").on('click.pageChange', function (e) {
+                e.preventDefault();
+
+                // get parent li's data-page attribute and current page
+                var parentLiPage = $(this).parent('li').data("page"),
+                    currentPage = parseInt($(".pagination-container tr[data-page]:visible").data('page'));
+
+
+                var numPages = '';
+                $(".pagination-container tr[data-page]").each(function (i, v) {
+                    numPages = $(v).data('page');
+
+                });
+
+                // make sure they aren't clicking the current page
+                if (parseInt(parentLiPage) !== parseInt(currentPage)) {
+                    // hide the current page
+
+                    $paginationContainer.find("tr[data-page]:visible").hide();
+                    if (parentLiPage === 'Next') {
+                        // next page
+                        $paginationContainer.find("tr[data-page=" + (currentPage + 1 >= numPages ? numPages : currentPage + 1) + "]").show();
+                    } else if (parentLiPage === 'Previous') {
+                        // previous page
+                        $paginationContainer.find("tr[data-page=" + (currentPage - 1 < 1 ? 1 : currentPage - 1) + "]").show();
+                    } else {
+                        // specific page
+                        $paginationContainer.find("tr[data-page=" + parseInt(parentLiPage) + "]").show();
+                    }
+                }
+            });
+        };
+        $(document).ready(paginationHandler);
+    </script>
+{% endblock %}

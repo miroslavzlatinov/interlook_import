@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}TimeStat{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    {% set count = head|length %}
+    <div class="container " style="width:100%">
+        {% include 'dashboard/menu.html.twig' with {'name':'Time Statistic'} %}
+        <div class="row">
+            {#<div class="col-sm-2">#}
+
+                <table id="example" class="table table-striped table-bordered ">
+
+                    <thead>
+                    <tr>
+                        <th scope="col">time/ms</th>
+                        {% for cell in head %}
+
+                            <th scope="col">{{ cell }}</th>
+                        {% endfor %}
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    {% for row in table  %}
+                        <tr>
+                            {% for full in row |batch(count+1, '0')%}
+                                  {% for cell in full %}
+                                <td scope="col" data-order="{{cell}}">{{cell}}</td>
+                                      {% endfor %}
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {#<script>#}
+        {#$(document).ready(function () {#}
+            {#$('#example').DataTable();#}
+        {#});#}
+
+    {#</script>#}
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "rowReorder": false,
+                "order": [],
+                "pageLength": 14,
+                responsive: true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5'
+                ]
+            });
+        });
+    </script>
+{% endblock %}
+

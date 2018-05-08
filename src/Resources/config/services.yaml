@@ -1,0 +1,17 @@
+#parameters:
+#    #parameter_name: value
+#    wsdl_url: http://evaluation.solvex.bg/iservice/integrationservice.asmx?WSDL
+#services:
+#    new_soap_client:
+#        class: SoapClient
+#        factory: ["@nfq_soap.factory", create]
+#        arguments: ["%wsdl_url%"]
+
+#    complite_soap_client:
+#        class: App\Client\Soap\IntegrationService
+#        arguments: [[],"%wsdl_url%"]
+#
+#    interlook_soap_client:
+#        class: App\Services\InterlookClient
+#        public: true
+#        arguments: ['@complite_soap_client']

@@ -1,0 +1,84 @@
+parameters:
+    # Adds a fallback DATABASE_URL if the env var is not set.
+    # This allows you to run cache:warmup even if your
+    # environment variables are not available yet.
+    # You should not need to change this value.
+
+    env(DATABASE_HOST2): ''
+    env(DATABASE_PORT2): ''
+    env(DATABASE_NAME2): ''
+    env(DATABASE_USER2): ''
+    env(DATABASE_PASSWORD2): ''
+    env(DATABASE_URL): ''
+
+    database_host2:  '%env(DATABASE_HOST2)%'
+    database_port2:  '%env(DATABASE_PORT2)%'
+    database_name2:  '%env(DATABASE_NAME2)%'
+    database_user2:  '%env(DATABASE_USER2)%'
+    database_password2: '%env(DATABASE_PASSWORD2)%'
+
+doctrine:
+    dbal:
+      default_connection: default
+      connections:
+          default:
+              # configure these for your database server
+              driver: 'pdo_mysql'
+              server_version: '5.7'
+              charset: utf8mb4
+
+              # With Symfony 3.3, remove the `resolve:` prefix
+              url: '%env(DATABASE_URL)%'
+          interlook:
+#                driver:   'sqlsrv'
+                driver_class: Doctrine\DBAL\Driver\PDOSqlsrv\Driver
+#                driver_class: Doctrine\DBAL\Driver\SQLSrv\Driver
+                host:     '%database_host2%'
+                port:     '%database_port2%'
+                dbname:   '%database_name2%'
+                user:     '%database_user2%'
+                password: '%database_password2%'
+
+                charset:  UTF8
+#                options: [PDO::ATTR_TIMEOUT => 60]
+
+    orm:
+        default_entity_manager: default
+        auto_generate_proxy_classes: '%kernel.debug%'
+
+
+        entity_managers:
+
+             default:
+                 connection: default
+                 dql:
+                   datetime_functions:
+                      DATE_FORMAT: App\DQL\DateFormatFunction
+
+                 naming_strategy: doctrine.orm.naming_strategy.underscore
+                 auto_mapping: true
+                 mappings:
+                       App:
+                          is_bundle: false
+                          type: annotation
+                          dir: '%kernel.project_dir%/src/Entity'
+                          prefix: 'App\Entity'
+                          alias: App
+
+
+             dogovor:
+                connection: interlook
+                mappings:
+                   Dogovor:
+                       is_bundle: false
+                       type: annotation
+                       dir: '%kernel.project_dir%/src/External/Dogovor'
+                       prefix: 'App\External\Dogovor'
+                       alias: Dogovor
+
+#                   CriticalChanges:
+#                          is_bundle: false
+#                          type: annotation
+#                          dir: '%kernel.project_dir%/src/Entity'
+#                          prefix: 'App\Entity\Dogovor'
+#                          alias: CriticalChanges

@@ -1,0 +1,591 @@
+{
+  "agentDiscount": 0,
+  "rate": {
+    "isMain": false,
+    "isNational": false,
+    "description": "",
+    "nameLat": "",
+    "code": "EU",
+    "codeLat": "EU",
+    "unicode": "",
+    "additionalParams": null,
+    "name": "",
+    "iD": 1
+  },
+  "touristServices": [
+    {
+      "iD": 0,
+      "name": "",
+      "touristID": -1,
+      "serviceID": 1
+    },
+    {
+      "iD": 0,
+      "name": "",
+      "touristID": -2,
+      "serviceID": 1
+    },
+    {
+      "iD": 0,
+      "name": "",
+      "touristID": -3,
+      "serviceID": 1
+    }
+  ],
+  "services": [
+    {
+      "hotel": {
+        "hotelCategory": null,
+        "city": {
+          "country": null,
+          "countryID": 4,
+          "regionID": 0,
+          "description": "",
+          "nameLat": "",
+          "code": "",
+          "codeLat": "",
+          "unicode": "",
+          "additionalParams": null,
+          "name": "",
+          "iD": 33
+        },
+        "regionID": 0,
+        "priceType": "None",
+        "countCosts": 0,
+        "cityID": 33,
+        "hotelCategoryID": 0,
+        "description": "",
+        "nameLat": "",
+        "code": "",
+        "codeLat": "",
+        "unicode": "",
+        "additionalParams": null,
+        "name": "",
+        "iD": 5353
+      },
+      "room": {
+        "roomType": null,
+        "roomTypeID": 56,
+        "roomCategory": null,
+        "roomCategoryID": 44,
+        "roomAccomodation": null,
+        "roomAccomodationID": 2315,
+        "iD": 0,
+        "name": ""
+      },
+      "roomID": 0,
+      "pansion": null,
+      "pansionID": 26,
+      "externalID": 1930974,
+      "price": 0,
+      "nMen": 3,
+      "serviceClass": null,
+      "partner": null,
+      "partnerID": 0,
+      "quota": "Request",
+      "packetKey": 0,
+      "additionalParams": null,
+      "tourists": [
+        {
+          "localPassport": {
+            "issuedBy": "",
+            "serie": "",
+            "number": "",
+            "issueDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            },
+            "endDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            }
+          },
+          "foreignPassport": {
+            "issuedBy": "",
+            "serie": "",
+            "number": "",
+            "issueDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            },
+            "endDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            }
+          },
+          "additionalParams": null,
+          "name": "",
+          "sex": "Female",
+          "firstName": "",
+          "lastName": "",
+          "surName": "",
+          "birthDate": {
+            "timezone": {
+              "name": "+03:00",
+              "transitions": false,
+              "location": false
+            },
+            "offset": 10800,
+            "timestamp": -640058400
+          },
+          "firstNameLat": "Dostalova",
+          "lastNameLat": "",
+          "surNameLat": "Bretislava",
+          "ageType": "Adult",
+          "citizen": "",
+          "isMain": false,
+          "externalID": 0,
+          "iD": -1
+        },
+        {
+          "localPassport": {
+            "issuedBy": "",
+            "serie": "",
+            "number": "",
+            "issueDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            },
+            "endDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            }
+          },
+          "foreignPassport": {
+            "issuedBy": "",
+            "serie": "",
+            "number": "",
+            "issueDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            },
+            "endDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            }
+          },
+          "additionalParams": null,
+          "name": "",
+          "sex": "Child",
+          "firstName": "",
+          "lastName": "",
+          "surName": "",
+          "birthDate": {
+            "timezone": {
+              "name": "+02:00",
+              "transitions": false,
+              "location": false
+            },
+            "offset": 7200,
+            "timestamp": 1194127200
+          },
+          "firstNameLat": "Dostalova",
+          "lastNameLat": "",
+          "surNameLat": "Veronika",
+          "ageType": "Child",
+          "citizen": "",
+          "isMain": false,
+          "externalID": 0,
+          "iD": -2
+        },
+        {
+          "localPassport": {
+            "issuedBy": "",
+            "serie": "",
+            "number": "",
+            "issueDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            },
+            "endDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            }
+          },
+          "foreignPassport": {
+            "issuedBy": "",
+            "serie": "",
+            "number": "",
+            "issueDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            },
+            "endDate": {
+              "timezone": {
+                "name": "+02:00",
+                "transitions": false,
+                "location": false
+              },
+              "offset": 7200,
+              "timestamp": 1518645600
+            }
+          },
+          "additionalParams": null,
+          "name": "",
+          "sex": "Male",
+          "firstName": "",
+          "lastName": "",
+          "surName": "",
+          "birthDate": {
+            "timezone": {
+              "name": "+03:00",
+              "transitions": false,
+              "location": false
+            },
+            "offset": 10800,
+            "timestamp": -803008800
+          },
+          "firstNameLat": "Dostal",
+          "lastNameLat": "",
+          "surNameLat": "Jaroslav",
+          "ageType": "Adult",
+          "citizen": "",
+          "isMain": false,
+          "externalID": 0,
+          "iD": -3
+        }
+      ],
+      "detailNetto": "",
+      "detailBrutto": "",
+      "notes": "",
+      "name": "Arena Mar 4* (Golden Sands)",
+      "startDate": {
+        "timezone": {
+          "name": "+03:00",
+          "transitions": false,
+          "location": false
+        },
+        "offset": 10800,
+        "timestamp": 1527800400
+      },
+      "startDay": 0,
+      "duration": 5,
+      "rateBrutto": "",
+      "brutto": 0,
+      "rateNetto": "",
+      "netto": 0,
+      "serviceClassID": 1,
+      "touristCount": 3,
+      "iD": 1,
+      "status": null
+    }
+  ],
+  "flightIn": null,
+  "flightOut": null,
+  "iD": -1,
+  "name": "1953906",
+  "netto": 0,
+  "brutto": 0,
+  "countryID": 4,
+  "cityID": 33,
+  "partnerID": 0,
+  "status": "WaitingConfirmation",
+  "startDate": {
+    "timezone": {
+      "name": "+03:00",
+      "transitions": false,
+      "location": false
+    },
+    "offset": 10800,
+    "timestamp": 1527800400
+  },
+  "endDate": {
+    "timezone": {
+      "name": "+03:00",
+      "transitions": false,
+      "location": false
+    },
+    "offset": 10800,
+    "timestamp": 1528232400
+  },
+  "duration": 5,
+  "creationDate": {
+    "timezone": {
+      "name": "+02:00",
+      "transitions": false,
+      "location": false
+    },
+    "offset": 7200,
+    "timestamp": 1518708028
+  },
+  "creatorID": 0,
+  "tourists": [
+    {
+      "localPassport": {
+        "issuedBy": "",
+        "serie": "",
+        "number": "",
+        "issueDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        },
+        "endDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        }
+      },
+      "foreignPassport": {
+        "issuedBy": "",
+        "serie": "",
+        "number": "",
+        "issueDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        },
+        "endDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        }
+      },
+      "additionalParams": null,
+      "name": "",
+      "sex": "Female",
+      "firstName": "",
+      "lastName": "",
+      "surName": "",
+      "birthDate": {
+        "timezone": {
+          "name": "+03:00",
+          "transitions": false,
+          "location": false
+        },
+        "offset": 10800,
+        "timestamp": -640058400
+      },
+      "firstNameLat": "Dostalova",
+      "lastNameLat": "",
+      "surNameLat": "Bretislava",
+      "ageType": "Adult",
+      "citizen": "",
+      "isMain": false,
+      "externalID": 1164606,
+      "iD": -1
+    },
+    {
+      "localPassport": {
+        "issuedBy": "",
+        "serie": "",
+        "number": "",
+        "issueDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        },
+        "endDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        }
+      },
+      "foreignPassport": {
+        "issuedBy": "",
+        "serie": "",
+        "number": "",
+        "issueDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        },
+        "endDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        }
+      },
+      "additionalParams": null,
+      "name": "",
+      "sex": "Child",
+      "firstName": "",
+      "lastName": "",
+      "surName": "",
+      "birthDate": {
+        "timezone": {
+          "name": "+02:00",
+          "transitions": false,
+          "location": false
+        },
+        "offset": 7200,
+        "timestamp": 1194127200
+      },
+      "firstNameLat": "Dostalova",
+      "lastNameLat": "",
+      "surNameLat": "Veronika",
+      "ageType": "Child",
+      "citizen": "",
+      "isMain": false,
+      "externalID": 1164607,
+      "iD": -2
+    },
+    {
+      "localPassport": {
+        "issuedBy": "",
+        "serie": "",
+        "number": "",
+        "issueDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        },
+        "endDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        }
+      },
+      "foreignPassport": {
+        "issuedBy": "",
+        "serie": "",
+        "number": "",
+        "issueDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        },
+        "endDate": {
+          "timezone": {
+            "name": "+02:00",
+            "transitions": false,
+            "location": false
+          },
+          "offset": 7200,
+          "timestamp": 1518645600
+        }
+      },
+      "additionalParams": null,
+      "name": "",
+      "sex": "Male",
+      "firstName": "",
+      "lastName": "",
+      "surName": "",
+      "birthDate": {
+        "timezone": {
+          "name": "+03:00",
+          "transitions": false,
+          "location": false
+        },
+        "offset": 10800,
+        "timestamp": -803008800
+      },
+      "firstNameLat": "Dostal",
+      "lastNameLat": "",
+      "surNameLat": "Jaroslav",
+      "ageType": "Adult",
+      "citizen": "",
+      "isMain": false,
+      "externalID": 1164608,
+      "iD": -3
+    }
+  ],
+  "ownerID": 0,
+  "externalID": 344177,
+  "additionalParams": [
+    {
+      "value": 0,
+      "key": "PCNId"
+    }
+  ],
+  "hasInvoices": false
+}

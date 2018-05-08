@@ -1,0 +1,187 @@
+{% extends 'base.html.twig' %}
+ {% block stylesheets %}
+     <link rel="stylesheet" href="{{ asset('/materialize/css/materialize.css') }}" />
+     {#<link rel="stylesheet" href="{{ asset('/materialize/css/drop_down.css') }}" />#}
+
+ {% endblock %}
+
+{% block body %}
+
+    <body style="font-family: Arial;border: 0 none;">
+
+
+        {#<button onclick="myFunction()" class="dropbtn">Partner</button>#}
+        {#<div id="myDropdown" class="dropdown-content">#}
+            {#<a href="{{ path('map', {'id': 'all'}) }}">All</a>#}
+            {#{%  for p in  partners %}#}
+            {#<a href="{{ path('map', {'id': p.interlookId}) }}">{{ p.name }}</a>#}
+            {#{% endfor %}#}
+        {#</div>#}
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+            {#<li><a href="#!">one</a></li>#}
+            <li><a href="{{ path('map', {'id': 'all'}) }}">All</a></li>
+            {%  for p in  partners %}
+            <li><a href="{{ path('map', {'id': p.interlookId}) }}">{{ p.name }}</a></li>
+            {% endfor %}
+            {#<li class="divider" tabindex="-1"></li>#}
+
+        </ul>
+
+
+    <div id="dashboard">
+        <table>
+            <tr style='vertical-align: top'>
+                {#<td style='width: 500px; font-size: 0.9em;'>#}
+                    <div id="control1"></div>
+                    <div id="control2"></div>
+                    <div id="control3"></div>
+                {#</td>#}
+            </tr>
+            <tr>
+                <td style='width: 1024px'>
+                    <div style="float: left;" id="chart1"></div>
+                    <div style="float: left;" id="chart2"></div>
+                    <div style="float: left;" id="chart3"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </body>
+
+
+    {#<div id="table_div" style="width: 1024px; height: 762px;"></div>#}
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('/materialize/js/materialize.min.js') }}"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    {#<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>#}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+
+
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart','table','controls']});
+        google.charts.setOnLoadCallback(drawVisualization);
+
+
+        function drawVisualization() {
+            // Prepare the data
+            var data = google.visualization.arrayToDataTable({{ head3|raw }});
+
+            // Define category pickers for 'hotels'
+            var hotelPicker = new google.visualization.ControlWrapper({
+                'controlType': 'CategoryFilter',
+                'containerId': 'control1',
+                'options': {
+                    'filterColumnLabel': 'names',
+                    'ui': {
+                        'labelStacking': 'vertical',
+
+                        'allowTyping': false,
+                        'allowMultiple': true
+                    }
+                }
+            });
+
+            // var barChart = new google.visualization.ChartWrapper({
+            //     'chartType': 'BarChart',
+            //     'containerId': 'chart1',
+            //     'options': {
+            //         'width': 400,
+            //         'height': 300,
+            //         'chartArea': {top: 0, right: 0, bottom: 0}
+            //     },
+            //     // Configure the barchart to use columns
+            //     'view': {'columns': [2, 3,4,5,6,7,8,9,10]}
+            // });
+            var barChart = new google.visualization.ChartWrapper({
+                'chartType': 'Bar',
+                'containerId': 'chart1',
+                'options': {
+                    title : 'Daly Search',
+                    width: 800,
+                    height: 600,
+                  //  vAxis: {title: 'Cups'},
+                  //  hAxis: {title: 'Month'},
+                 //   seriesType: 'bars',
+                  //  reverseCategories: true,
+                   // series: {5: {type: 'line'}}
+
+                },
+                // Configure the barchart to use columns
+                // 'view': {'columns': [0,1,2, 3,4,5,6,7,8,9]}
+            });
+
+            // Define a table.
+            // The table shows whatever is selected by the category pickers. It's here
+            // just for reference and debugging.
+            var table = new google.visualization.ChartWrapper({
+                'chartType': 'Table',
+                'containerId': 'chart2',
+                'options': {
+                    'width': '100%',
+                    page: true,
+                    pageSize:20,
+                }
+            });
+
+            // Create the dashboard.
+            var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard'));
+
+
+            dashboard.bind(hotelPicker, [table]);
+            //dashboard.bind(hotelPicker, [table,barChart]);
+            // Draw the dashboard
+            dashboard.draw(data);
+
+            google.visualization.events.addListener(dashboard, 'ready', function() {
+                var hotelSelectedValues = hotelPicker.getState()['selectedValues'];
+
+                if (hotelSelectedValues.length == 0 ) {
+                    document.getElementById('chart1').style.visibility = 'hidden';
+                } else {
+                    document.getElementById('chart1').style.visibility = 'visible';
+                }
+            });
+            google.visualization.events.addListener(table, 'select', function() {
+                 // console.log( hotelPicker.getState());
+                  console.log(  table.getChart());
+                hotelPicker.setState('Adeona SKI & SPA');
+                //document.getElementById('chart1').style.visibility = 'visible';
+            });
+        }
+
+        // function myFunction() {
+        //     document.getElementById("myDropdown").classList.toggle("show");
+        // }
+        //
+        // // Close the dropdown if the user clicks outside of it
+        // window.onclick = function(event) {
+        //     if (!event.target.matches('.dropbtn')) {
+        //
+        //         var dropdowns = document.getElementsByClassName("dropdown-content");
+        //         var i;
+        //         for (i = 0; i < dropdowns.length; i++) {
+        //             var openDropdown = dropdowns[i];
+        //             if (openDropdown.classList.contains('show')) {
+        //                 openDropdown.classList.remove('show');
+        //             }
+        //         }
+        //     }
+        // }
+
+        var elem = document.querySelector('.dropdown-trigger');
+        var instance = M.Dropdown.init(elem);
+        // Or with jQuery
+
+        // $('.dropdown-trigger').dropdown();
+    </script>
+
+
+
+{% endblock %}

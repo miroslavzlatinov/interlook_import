@@ -1,0 +1,36 @@
+{% extends '@EasyAdmin/default/list.html.twig' %}
+{% block new_action %}
+    {% if easyadmin_action_is_enabled_for_list_view('sync', _entity_config.name) %}
+        {% set _action_s = easyadmin_get_action_for_list_view('sync', _entity_config.name) %}
+
+        {% block sync_action %}
+            <div class="button-action">
+                <a class="{{ _action_s.css_class|default('') }}" href="{{ path('easyadmin', _request_parameters|merge({ action: _action_s.name })) }}" target="{{ _action_s.target }}">
+                    {% if _action_s.icon %}<i class="fa fa-{{ _action_s.icon }}"></i>{% endif %}
+                    {{ _action_s.label is defined and not _action_s.label is empty ? _action_s.label|trans(_trans_parameters) }}
+                </a>
+            </div>
+        {% endblock sync_action %}
+    {% endif %}
+    {{ parent() }}
+    {#{{ dump(_action) }}#}
+{% endblock new_action %}
+
+{% block item_actions %}
+
+    {% set filtered_actions = {} %}
+    {% for action_name, action_config in _list_item_actions %}
+        {% if action_name == 'sync' %}
+
+        {% else%}
+        {% if action_name == 'import' and item.isimprted|default(false) == true  %}
+
+        {% else %}
+            {% set filtered_actions = filtered_actions|merge([action_config]) %}
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+
+    {% set _list_item_actions = filtered_actions %}
+    {{ parent() }}
+{% endblock item_actions %}

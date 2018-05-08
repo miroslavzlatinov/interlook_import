@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <GetReservationResponse xmlns="http://www.megatec.ru/">
+            <GetReservationResult HasInvoices="false">
+                <agentDiscount>0</agentDiscount>
+                <Rate>
+                    <Name>EU</Name>
+                    <ID>-1670</ID>
+                    <Description/>
+                    <NameLat/>
+                    <Code/>
+                    <CodeLat/>
+                    <Unicode/>
+                    <IsMain>false</IsMain>
+                    <IsNational>false</IsNational>
+                </Rate>
+                <TouristServices>
+                    <TouristService>
+                        <ID>4803904</ID>
+                        <Name/>
+                        <TouristID>1164673</TouristID>
+                        <ServiceID>1931034</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803903</ID>
+                        <Name/>
+                        <TouristID>1164674</TouristID>
+                        <ServiceID>1931034</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803913</ID>
+                        <Name/>
+                        <TouristID>1164673</TouristID>
+                        <ServiceID>1931035</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803911</ID>
+                        <Name/>
+                        <TouristID>1164674</TouristID>
+                        <ServiceID>1931035</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803914</ID>
+                        <Name/>
+                        <TouristID>1164673</TouristID>
+                        <ServiceID>1931036</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803912</ID>
+                        <Name/>
+                        <TouristID>1164674</TouristID>
+                        <ServiceID>1931036</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803906</ID>
+                        <Name/>
+                        <TouristID>1164673</TouristID>
+                        <ServiceID>1931031</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803905</ID>
+                        <Name/>
+                        <TouristID>1164674</TouristID>
+                        <ServiceID>1931031</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803908</ID>
+                        <Name/>
+                        <TouristID>1164673</TouristID>
+                        <ServiceID>1931032</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803907</ID>
+                        <Name/>
+                        <TouristID>1164674</TouristID>
+                        <ServiceID>1931032</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803910</ID>
+                        <Name/>
+                        <TouristID>1164673</TouristID>
+                        <ServiceID>1931033</ServiceID>
+                    </TouristService>
+                    <TouristService>
+                        <ID>4803909</ID>
+                        <Name/>
+                        <TouristID>1164674</TouristID>
+                        <ServiceID>1931033</ServiceID>
+                    </TouristService>
+                </TouristServices>
+                <Services>
+                    <Service xsi:type="HotelService">
+                        <ExternalID>0</ExternalID>
+                        <Price>0</Price>
+                        <NMen>2</NMen>
+                        <Partner>
+                            <Name>Leisure Scanner</Name>
+                            <ID>6417</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                            <PartnersGroupID>2660</PartnersGroupID>
+                            <FullName>Leisure Scanner</FullName>
+                            <Fax/>
+                            <Address/>
+                            <Zip/>
+                            <Email/>
+                            <Phones/>
+                        </Partner>
+                        <PartnerID>6417</PartnerID>
+                        <Quota>NotChecked</Quota>
+                        <PacketKey>0</PacketKey>
+                        <AdditionalParams>
+                            <ParameterPair Key="ContractPrKey">
+                                <Value xsi:type="xsd:int">5620</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="Tariff">
+                                <Value xsi:type="xsd:int">0</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffName">
+                                <Value xsi:type="xsd:string">Ordinary</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffDescription">
+                                <Value xsi:type="xsd:string"/>
+                            </ParameterPair>
+                        </AdditionalParams>
+                        <Tourists>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Testleisure3" LastNameLat=""
+                                     SurNameLat="Testleisure" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164673">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Leisure5" LastNameLat=""
+                                     SurNameLat="Leisure4" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164674">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                        </Tourists>
+                        <DetailNetto/>
+                        <DetailBrutto/>
+                        <Notes/>
+                        <Name>HTL::Golden Sands/NO accommodation-Golden Sands/not definite/not definite/not
+                            definite/ND
+                        </Name>
+                        <StartDate>2018-03-02T00:00:00</StartDate>
+                        <StartDay>0</StartDay>
+                        <Duration>14</Duration>
+                        <RateBrutto>EU</RateBrutto>
+                        <Brutto>0</Brutto>
+                        <RateNetto>EU</RateNetto>
+                        <Netto>0</Netto>
+                        <ServiceClassID>0</ServiceClassID>
+                        <TouristCount>2</TouristCount>
+                        <ID>1931034</ID>
+                        <Status>
+                            <Name>HTL::Golden Sands/NO accommodation-Golden Sands/not definite/not definite/not
+                                definite/ND
+                            </Name>
+                            <ID>1</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                        </Status>
+                        <Hotel>
+                            <Name>NO accommodation-Golden Sands</Name>
+                            <ID>5620</ID>
+                            <Description>Not defined (BULGARIA\Varna\Golden Sands)</Description>
+                            <NameLat/>
+                            <Code>GS090</Code>
+                            <CodeLat/>
+                            <Unicode/>
+                            <City>
+                                <Name>Golden Sands</Name>
+                                <ID>33</ID>
+                                <Description/>
+                                <NameLat/>
+                                <Code>GOL</Code>
+                                <CodeLat/>
+                                <Unicode/>
+                                <Country>
+                                    <Name>BULGARIA</Name>
+                                    <ID>4</ID>
+                                    <Description/>
+                                    <NameLat/>
+                                    <Code/>
+                                    <CodeLat/>
+                                    <Unicode/>
+                                    <IsIncoming>true</IsIncoming>
+                                </Country>
+                                <CountryID>0</CountryID>
+                                <RegionID>0</RegionID>
+                            </City>
+                            <RegionID>2</RegionID>
+                            <PriceType>None</PriceType>
+                            <CountCosts>0</CountCosts>
+                            <CityID>33</CityID>
+                            <HotelCategoryID>0</HotelCategoryID>
+                        </Hotel>
+                        <Room>
+                            <RoomType>
+                                <Name/>
+                                <ID>69</ID>
+                                <Description/>
+                                <NameLat/>
+                                <Code>not definite</Code>
+                                <CodeLat/>
+                                <Unicode/>
+                                <Places>100</Places>
+                                <ExPlaces>0</ExPlaces>
+                                <PrintOrder>0</PrintOrder>
+                            </RoomType>
+                            <RoomTypeID>69</RoomTypeID>
+                            <RoomCategory>
+                                <Name>not definite</Name>
+                                <ID>242</ID>
+                                <Description/>
+                                <NameLat/>
+                                <Code/>
+                                <CodeLat/>
+                                <Unicode/>
+                                <MainPlaces>0</MainPlaces>
+                                <ExtraPlaces>0</ExtraPlaces>
+                                <IsMain>false</IsMain>
+                            </RoomCategory>
+                            <RoomCategoryID>242</RoomCategoryID>
+                            <RoomAccomodation>
+                                <Name>not definite</Name>
+                                <ID>13995</ID>
+                                <Description/>
+                                <NameLat/>
+                                <Code/>
+                                <CodeLat/>
+                                <Unicode/>
+                                <PerRoom>false</PerRoom>
+                                <AdultMainPalces>0</AdultMainPalces>
+                                <ChildMainPalces>0</ChildMainPalces>
+                                <AdultExtraPalces>0</AdultExtraPalces>
+                                <ChildExtraPalces>0</ChildExtraPalces>
+                                <MainPlaces>1</MainPlaces>
+                                <ExtraPlaces>0</ExtraPlaces>
+                                <IsMain>true</IsMain>
+                                <AgeFrom>0</AgeFrom>
+                                <AgeTo>0</AgeTo>
+                                <Age2From>0</Age2From>
+                                <Age2To>0</Age2To>
+                            </RoomAccomodation>
+                            <RoomAccomodationID>13995</RoomAccomodationID>
+                            <ID>0</ID>
+                            <Name/>
+                        </Room>
+                        <RoomID>0</RoomID>
+                        <PansionID>40</PansionID>
+                    </Service>
+                    <Service xsi:type="TransferService">
+                        <ExternalID>0</ExternalID>
+                        <Price>0</Price>
+                        <NMen>2</NMen>
+                        <Partner>
+                            <Name>Leisure Scanner</Name>
+                            <ID>6417</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                            <PartnersGroupID>2660</PartnersGroupID>
+                            <FullName>Leisure Scanner</FullName>
+                            <Fax/>
+                            <Address/>
+                            <Zip/>
+                            <Email/>
+                            <Phones/>
+                        </Partner>
+                        <PartnerID>6417</PartnerID>
+                        <Quota>NotChecked</Quota>
+                        <PacketKey>0</PacketKey>
+                        <AdditionalParams>
+                            <ParameterPair Key="CityToKey">
+                                <Value xsi:type="xsd:int">33</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="PointFromId">
+                                <Value xsi:type="xsd:int">1003</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="PointToId">
+                                <Value xsi:type="xsd:int">1902</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="ContractPrKey">
+                                <Value xsi:type="xsd:int">2185</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="Tariff">
+                                <Value xsi:type="xsd:int">0</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffName">
+                                <Value xsi:type="xsd:string">Ordinary</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffDescription">
+                                <Value xsi:type="xsd:string"/>
+                            </ParameterPair>
+                        </AdditionalParams>
+                        <Tourists>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Testleisure3" LastNameLat=""
+                                     SurNameLat="Testleisure" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164673">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Leisure5" LastNameLat=""
+                                     SurNameLat="Leisure4" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164674">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                        </Tourists>
+                        <DetailNetto/>
+                        <DetailBrutto/>
+                        <Notes/>
+                        <Name>TRF::Arrival transfer/car/1-3//AirPort-Varna-Astera/Golden Sands/S7921</Name>
+                        <StartDate>2018-03-02T00:00:00</StartDate>
+                        <StartDay>0</StartDay>
+                        <Duration>1</Duration>
+                        <RateBrutto>EU</RateBrutto>
+                        <Brutto>0</Brutto>
+                        <RateNetto>EU</RateNetto>
+                        <Netto>0</Netto>
+                        <ServiceClassID>2</ServiceClassID>
+                        <TouristCount>2</TouristCount>
+                        <ID>1931035</ID>
+                        <Status>
+                            <Name>TRF::Arrival transfer/car/1-3//AirPort-Varna-Astera/Golden Sands/S7921</Name>
+                            <ID>2</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                        </Status>
+                        <Transfer>
+                            <AdditionalParams>
+                                <ParameterPair Key="SlKey">
+                                    <Value xsi:type="xsd:int">1</Value>
+                                </ParameterPair>
+                            </AdditionalParams>
+                            <Name/>
+                            <ID>159</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                            <PlaceFrom/>
+                            <PlaceTo/>
+                            <CityID>0</CityID>
+                            <RegionID>0</RegionID>
+                        </Transfer>
+                        <Transport>
+                            <Name>car/1-3/</Name>
+                            <ID>3</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                        </Transport>
+                        <PointToId>1902</PointToId>
+                        <CityKey>7</CityKey>
+                        <PointToName>Astera</PointToName>
+                        <PointFromId>1003</PointFromId>
+                        <PointFromName>AirPort-Varna</PointFromName>
+                    </Service>
+                    <Service xsi:type="TransferService">
+                        <ExternalID>0</ExternalID>
+                        <Price>0</Price>
+                        <NMen>2</NMen>
+                        <Partner>
+                            <Name>Leisure Scanner</Name>
+                            <ID>6417</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                            <PartnersGroupID>2660</PartnersGroupID>
+                            <FullName>Leisure Scanner</FullName>
+                            <Fax/>
+                            <Address/>
+                            <Zip/>
+                            <Email/>
+                            <Phones/>
+                        </Partner>
+                        <PartnerID>6417</PartnerID>
+                        <Quota>NotChecked</Quota>
+                        <PacketKey>0</PacketKey>
+                        <AdditionalParams>
+                            <ParameterPair Key="CityToKey">
+                                <Value xsi:type="xsd:int">7</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="PointFromId">
+                                <Value xsi:type="xsd:int">1902</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="PointToId">
+                                <Value xsi:type="xsd:int">1003</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="ContractPrKey">
+                                <Value xsi:type="xsd:int">2185</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="Tariff">
+                                <Value xsi:type="xsd:int">0</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffName">
+                                <Value xsi:type="xsd:string">Ordinary</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffDescription">
+                                <Value xsi:type="xsd:string"/>
+                            </ParameterPair>
+                        </AdditionalParams>
+                        <Tourists>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Testleisure3" LastNameLat=""
+                                     SurNameLat="Testleisure" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164673">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Leisure5" LastNameLat=""
+                                     SurNameLat="Leisure4" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164674">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                        </Tourists>
+                        <DetailNetto/>
+                        <DetailBrutto/>
+                        <Notes/>
+                        <Name>TRF::Departure transfer/car/1-3//Astera-AirPort-Varna/Varna/S7922</Name>
+                        <StartDate>2018-03-15T00:00:00</StartDate>
+                        <StartDay>0</StartDay>
+                        <Duration>1</Duration>
+                        <RateBrutto>EU</RateBrutto>
+                        <Brutto>0</Brutto>
+                        <RateNetto>EU</RateNetto>
+                        <Netto>0</Netto>
+                        <ServiceClassID>2</ServiceClassID>
+                        <TouristCount>2</TouristCount>
+                        <ID>1931036</ID>
+                        <Status>
+                            <Name>TRF::Departure transfer/car/1-3//Astera-AirPort-Varna/Varna/S7922</Name>
+                            <ID>2</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                        </Status>
+                        <Transfer>
+                            <AdditionalParams>
+                                <ParameterPair Key="SlKey">
+                                    <Value xsi:type="xsd:int">2</Value>
+                                </ParameterPair>
+                            </AdditionalParams>
+                            <Name/>
+                            <ID>164</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                            <PlaceFrom/>
+                            <PlaceTo/>
+                            <CityID>0</CityID>
+                            <RegionID>0</RegionID>
+                        </Transfer>
+                        <Transport>
+                            <Name>car/1-3/</Name>
+                            <ID>3</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                        </Transport>
+                        <PointToId>1003</PointToId>
+                        <CityKey>33</CityKey>
+                        <PointToName>AirPort-Varna</PointToName>
+                        <PointFromId>1902</PointFromId>
+                        <PointFromName>Astera</PointFromName>
+                    </Service>
+                    <Service xsi:type="ExtraService">
+                        <ExternalID>0</ExternalID>
+                        <Price>0</Price>
+                        <NMen>2</NMen>
+                        <PartnerID>6417</PartnerID>
+                        <Quota>NotChecked</Quota>
+                        <PacketKey>0</PacketKey>
+                        <AdditionalParams>
+                            <ParameterPair Key="HotelDlKey">
+                                <Value xsi:type="xsd:int">1931034</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="ContractPrKey">
+                                <Value xsi:type="xsd:int">2695</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="Tariff">
+                                <Value xsi:type="xsd:int">0</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffName">
+                                <Value xsi:type="xsd:string">Ordinary</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffDescription">
+                                <Value xsi:type="xsd:string"/>
+                            </ParameterPair>
+                        </AdditionalParams>
+                        <Tourists>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Testleisure3" LastNameLat=""
+                                     SurNameLat="Testleisure" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164673">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Leisure5" LastNameLat=""
+                                     SurNameLat="Leisure4" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164674">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                        </Tourists>
+                        <DetailNetto/>
+                        <DetailBrutto/>
+                        <Notes/>
+                        <Name>EX::communal_fee/NO accommodation-Golden Sands/not definite/not definite/not
+                            definite(Golden Sands)
+                        </Name>
+                        <StartDate>2018-03-02T00:00:00</StartDate>
+                        <StartDay>0</StartDay>
+                        <Duration>2</Duration>
+                        <RateBrutto>EU</RateBrutto>
+                        <Brutto>0</Brutto>
+                        <RateNetto>EU</RateNetto>
+                        <Netto>0</Netto>
+                        <ServiceClassID>23</ServiceClassID>
+                        <TouristCount>2</TouristCount>
+                        <ID>1931031</ID>
+                        <Status>
+                            <Name>EX::communal_fee/NO accommodation-Golden Sands/not definite/not definite/not
+                                definite(Golden Sands)
+                            </Name>
+                            <ID>2</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                        </Status>
+                        <CityKey>33</CityKey>
+                        <IsPackage>false</IsPackage>
+                        <Code>1992</Code>
+                        <HasDuration>false</HasDuration>
+                    </Service>
+                    <Service xsi:type="ExtraService">
+                        <ExternalID>0</ExternalID>
+                        <Price>0</Price>
+                        <NMen>2</NMen>
+                        <PartnerID>6417</PartnerID>
+                        <Quota>NotChecked</Quota>
+                        <PacketKey>0</PacketKey>
+                        <AdditionalParams>
+                            <ParameterPair Key="HotelDlKey">
+                                <Value xsi:type="xsd:int">1931034</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="ContractPrKey">
+                                <Value xsi:type="xsd:int">2642</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="Tariff">
+                                <Value xsi:type="xsd:int">0</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffName">
+                                <Value xsi:type="xsd:string">Ordinary</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffDescription">
+                                <Value xsi:type="xsd:string"/>
+                            </ParameterPair>
+                        </AdditionalParams>
+                        <Tourists>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Testleisure3" LastNameLat=""
+                                     SurNameLat="Testleisure" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164673">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Leisure5" LastNameLat=""
+                                     SurNameLat="Leisure4" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164674">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                        </Tourists>
+                        <DetailNetto/>
+                        <DetailBrutto/>
+                        <Notes/>
+                        <Name>EX::handling fee_sea/NO accommodation-Golden Sands/not definite/not definite/not
+                            definite(Golden Sands)
+                        </Name>
+                        <StartDate>2018-03-02T00:00:00</StartDate>
+                        <StartDay>0</StartDay>
+                        <Duration>2</Duration>
+                        <RateBrutto>EU</RateBrutto>
+                        <Brutto>0</Brutto>
+                        <RateNetto>EU</RateNetto>
+                        <Netto>0</Netto>
+                        <ServiceClassID>25</ServiceClassID>
+                        <TouristCount>2</TouristCount>
+                        <ID>1931032</ID>
+                        <Status>
+                            <Name>EX::handling fee_sea/NO accommodation-Golden Sands/not definite/not definite/not
+                                definite(Golden Sands)
+                            </Name>
+                            <ID>2</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                        </Status>
+                        <CityKey>33</CityKey>
+                        <IsPackage>false</IsPackage>
+                        <Code>1996</Code>
+                        <HasDuration>false</HasDuration>
+                    </Service>
+                    <Service xsi:type="ExtraService">
+                        <ExternalID>0</ExternalID>
+                        <Price>0</Price>
+                        <NMen>2</NMen>
+                        <PartnerID>6417</PartnerID>
+                        <Quota>NotChecked</Quota>
+                        <PacketKey>0</PacketKey>
+                        <AdditionalParams>
+                            <ParameterPair Key="HotelDlKey">
+                                <Value xsi:type="xsd:int">1931034</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="ContractPrKey">
+                                <Value xsi:type="xsd:int">2659</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="Tariff">
+                                <Value xsi:type="xsd:int">0</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffName">
+                                <Value xsi:type="xsd:string">Ordinary</Value>
+                            </ParameterPair>
+                            <ParameterPair Key="TariffDescription">
+                                <Value xsi:type="xsd:string"/>
+                            </ParameterPair>
+                        </AdditionalParams>
+                        <Tourists>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Testleisure3" LastNameLat=""
+                                     SurNameLat="Testleisure" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164673">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                            <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName=""
+                                     BirthDate="0001-01-01T00:00:00" FirstNameLat="Leisure5" LastNameLat=""
+                                     SurNameLat="Leisure4" AgeType="Adult" Citizen="" IsMain="false" ExternalID="0"
+                                     ID="1164674">
+                                <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                               EndDate="2018-03-02T00:00:00+02:00"/>
+                                <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                                 EndDate="0001-01-01T00:00:00"/>
+                            </Tourist>
+                        </Tourists>
+                        <DetailNetto/>
+                        <DetailBrutto/>
+                        <Notes/>
+                        <Name>EX::representative service_sea/NO accommodation-Golden Sands/not definite/not definite/not
+                            definite(Golden Sands)
+                        </Name>
+                        <StartDate>2018-03-02T00:00:00</StartDate>
+                        <StartDay>0</StartDay>
+                        <Duration>2</Duration>
+                        <RateBrutto>EU</RateBrutto>
+                        <Brutto>0</Brutto>
+                        <RateNetto>EU</RateNetto>
+                        <Netto>0</Netto>
+                        <ServiceClassID>26</ServiceClassID>
+                        <TouristCount>2</TouristCount>
+                        <ID>1931033</ID>
+                        <Status>
+                            <Name>EX::representative service_sea/NO accommodation-Golden Sands/not definite/not
+                                definite/not definite(Golden Sands)
+                            </Name>
+                            <ID>2</ID>
+                            <Description/>
+                            <NameLat/>
+                            <Code/>
+                            <CodeLat/>
+                            <Unicode/>
+                        </Status>
+                        <CityKey>33</CityKey>
+                        <IsPackage>false</IsPackage>
+                        <Code>1997</Code>
+                        <HasDuration>false</HasDuration>
+                    </Service>
+                </Services>
+                <ID>344203</ID>
+                <Name>1953920</Name>
+                <Netto>0</Netto>
+                <Brutto>0</Brutto>
+                <CountryID>4</CountryID>
+                <CityID>33</CityID>
+                <PartnerID>6417</PartnerID>
+                <AgentDiscount>0</AgentDiscount>
+                <Status>WaitingConfirmation</Status>
+                <StartDate>2018-03-02T00:00:00</StartDate>
+                <EndDate>2018-03-15T00:00:00</EndDate>
+                <Duration>13</Duration>
+                <CreationDate>2018-03-02T16:10:19.07</CreationDate>
+                <CreatorID>5</CreatorID>
+                <Tourists>
+                    <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName="" BirthDate="0001-01-01T00:00:00"
+                             FirstNameLat="Testleisure3" LastNameLat="" SurNameLat="Testleisure" AgeType="Adult"
+                             Citizen="" IsMain="false" ExternalID="0" ID="1164673">
+                        <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                       EndDate="2018-03-02T00:00:00+02:00"/>
+                        <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                         EndDate="0001-01-01T00:00:00"/>
+                    </Tourist>
+                    <Tourist Name="" Sex="Male" FirstName="" LastName="" SurName="" BirthDate="0001-01-01T00:00:00"
+                             FirstNameLat="Leisure5" LastNameLat="" SurNameLat="Leisure4" AgeType="Adult" Citizen=""
+                             IsMain="false" ExternalID="0" ID="1164674">
+                        <LocalPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                       EndDate="2018-03-02T00:00:00+02:00"/>
+                        <ForeignPassport IssuedBy="" Serie="" Number="" IssueDate="2018-03-02T00:00:00+02:00"
+                                         EndDate="0001-01-01T00:00:00"/>
+                    </Tourist>
+                </Tourists>
+                <OwnerID>0</OwnerID>
+                <ExternalID>0</ExternalID>
+                <AdditionalParams>
+                    <ParameterPair Key="PcnId">
+                        <Value xsi:type="xsd:int">0</Value>
+                    </ParameterPair>
+                </AdditionalParams>
+            </GetReservationResult>
+        </GetReservationResponse>
+    </soap:Body>
+</soap:Envelope

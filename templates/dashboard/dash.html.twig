@@ -1,0 +1,140 @@
+{% extends 'base.html.twig' %}
+{% block title %}Searches By hotels{% endblock %}
+ {% block stylesheets %}
+     {{ parent() }}
+
+ {% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        {% include 'dashboard/menu.html.twig' with {'name':'Hotels by Searches'}%}
+        <div class="row">
+            <div class="col-4">
+                {{ form_start(form) }}
+                {{ form_widget(form.name) }}
+                {{ form_widget(form.date_from) }}
+                {{ form_widget(form.date_to) }}
+                {{ form_rest(form) }}
+            </div>
+            <div class="col-3">
+                <input type="submit" class="btn btn-info" value="Search"/>
+                {{ form_end(form) }}
+                <button  id = "chart_b" type="button" class="btn btn-info">Chart</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="well" style="width: 200px">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Split dropright button -->
+        <div class="row ">
+            <table id="example" class="display "  style="width:100%">
+
+                {% for row in head3 %}
+                    {% if loop.index == 1 %}
+                        <thead>
+                        <tr>
+                            {% for cel in row %}
+                                <th> {{ cel }}</th>
+                            {% endfor %}
+                        </tr>
+                        </thead>
+                    {% endif %}
+                {% endfor %}
+                <tbody>
+                {% for row in head3 %}
+
+                    {% if loop.index > 1 %}
+                        <tr>
+                            {% for cel in row %}
+                                <td data-order="{{ cel }}">{{ cel }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <div class="modal" id ="modal_b" tabindex="-1" role="dialog" style=" width: 100%;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                    <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {#<script>#}
+        {#// $(document).ready(function () {#}
+        {#//     $('#example').DataTable();#}
+        {#// });#}
+    {#</script>#}
+        <script>
+        $(document).ready(function () {
+            var table =    $('#example').DataTable({
+                select: true,
+                responsive: true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5'
+                ]
+            });
+            table.on( 'select', function ( e, dt, type, indexes ) {
+                if ( type === 'row' ) {
+                  //  var data = table.rows( indexes ).data();
+                }
+            } );
+           $('#chart_b').click(function() {
+               var dataPoints = [];
+
+
+                   var rows = table.rows('.selected').data().toArray();
+               console.log(rows);
+                   // rows.each(function($i,$v){
+                   //
+                   //     $.each($i, function ($i1, $v1) {
+                   //         var element = {};
+                   //
+                   //         element.label = $v1.display;
+                   //         element.y = $v1.display;
+                   //         dataPoints.push(element);
+                   //
+                   //
+                   //     });
+                   //
+                   //
+                   //
+                   // });
+
+                   $('#modal_b').modal('show');
+
+
+           });
+        });
+
+
+
+    </script>
+
+
+
+{% endblock %}
